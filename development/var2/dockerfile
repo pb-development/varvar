@@ -1,0 +1,39 @@
+FROM amazonlinux
+
+MAINTAINER yoshimasa hakone
+
+USER root
+
+RUN yum install -y httpd24
+RUN yum install -y php71
+RUN yum install -y php71-cli
+RUN yum install -y php71-common
+RUN yum install -y php71-devel
+RUN yum install -y php71-fpm
+RUN yum install -y php71-json
+RUN yum install -y php71-mbstring
+RUN yum install -y php71-mcrypt
+RUN yum install -y php71-opcache
+RUN yum install -y php71-pdo
+RUN yum install -y php71-pecl-redis
+RUN yum install -y php71-pecl-oauth
+RUN yum install -y php71-pgsql
+RUN yum install -y php71-xml
+RUN yum install -y php71-mysqlnd
+RUN yum install -y php71-pecl-xdebug
+RUN yum install -y mysql57-server
+RUN yum install -y vim
+RUN yum install -y openssl
+RUN yum install -y mod24_ssl
+
+COPY server.crt /etc/httpd/conf/server.crt
+COPY server.key /etc/httpd/conf/server.key
+COPY vhost.conf /etc/httpd/conf.d/vhost.conf
+COPY .htpasswd /etc/httpd/.htpasswd
+COPY php.ini /etc/php.ini
+COPY .bashrc /root/.bashrc
+
+CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+
+
+# EXPOSE 80

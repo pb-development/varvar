@@ -1,0 +1,9 @@
+var2:
+    build: var2
+    container_name: var2-web
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ../:/var/www/html
+    restart: always
