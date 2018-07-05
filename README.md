@@ -23,17 +23,6 @@ varvar.jsonを生成する
 vv open
 ```
 
-## Build
-
-- ビルドツール　インストール
-    curl -LSs https://box-project.github.io/box2/installer.php | php
-
-- ビルド設定ファイル作成
-    vim box.json
-
-- ビルド
-box.phar build
-
 ### Dependences
 - PHPの入っている環境
 
