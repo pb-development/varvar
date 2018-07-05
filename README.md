@@ -2,25 +2,18 @@
 
 変数名、関数名などのネーミングを考える時間を軽減し、エンジニアが本来考えるべき、ロジックや問題に使う時間を少しでも多く使えるようにする為のツールです
 
+## Description
 コマンドラインに、varvar用のコマンドと単語を打ち込むと、適切な単語・フレーズを提示してどれを使えばいいのかが表示されます
 
 あとは、その単語・フレーズをあなたのソースにコピペするだけです
 
-## Description
-なぜつくるのか？？解決したい課題
-
-- 変数・関数・etc ネーミングに使う時間を1分以内にしたい！！
-上記の考える時間を軽減し、より本質の部分に集中できる環境を提供する
-
-- 日本人エンジニアがコーディングを行う際に発生する変数名や関数名などを考える時間を少なくしたい（できれば１分以内）
-
-- センスの良い名前を考えるのは意外に時間がかかるもの、一度考えだすと翻訳サイトや類義語を検索したりして意外に時間を消費していると思う
-
+### Demo
+![varvar mov](https://user-images.githubusercontent.com/15168738/42141197-7469e9f2-7de2-11e8-9800-daf2e4050cab.gif)
 
 ## Usage
 ### Install
 ```
-composer install …
+composer require pb-development/varvar
 ```
 
 ### Settings
@@ -189,16 +182,8 @@ vv order -cn 結果
 5. Create new Pull Request
 
 ## License
-
+MIT
 
 ## Tech 
 
-- コマンドラインインターフェース
-
-- 単語を翻訳する
-　　google翻訳API（要調査）
-
-- 単語がどのような文章、文脈で使われているのかを返却する
-　　Facebook Translate （要調査)
-　　https://facebook.ai/developers/tools/translate
-
+- Facebook Translate
